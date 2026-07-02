@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Lab — generative studies</title>
+  <style>
+    :root {
+      --ground: #10121b;
+      --raised: #171a26;
+      --paper: #e9e2d4;
+      --ember: #f0a97a;
+      --muted: #8a8ea3;
+      --line: rgba(233, 226, 212, 0.1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(120% 90% at 80% 0%, #191d2c 0%, var(--ground) 55%) fixed;
+      color: var(--paper);
+      font-family: ui-sans-serif, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: clamp(3rem, 9vw, 7rem) clamp(1.5rem, 5vw, 3rem) 4rem;
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--ember);
+      font-weight: 500;
+    }
+    h1 {
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: clamp(2.6rem, 7vw, 4.5rem);
+      line-height: 0.98;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      margin: 0.6rem 0 1rem;
+      text-wrap: balance;
+    }
+    .lede {
+      max-width: 42ch;
+      color: #c4c0b4;
+      font-size: 1.05rem;
+    }
+    .grid {
+      margin-top: clamp(2.5rem, 6vw, 4rem);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1.4rem 1.4rem 1.5rem;
+      background: var(--raised);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.18s ease, border-color 0.18s ease;
+    }
+    .card:hover, .card:focus-visible {
+      transform: translateY(-3px);
+      border-color: rgba(240, 169, 122, 0.5);
+      outline: none;
+    }
+    .card:focus-visible { box-shadow: 0 0 0 2px rgba(240, 169, 122, 0.6); }
+    .card .no {
+      font-family: "Iowan Old Style", Georgia, serif;
+      font-variant-numeric: tabular-nums;
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+    .card h2 {
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .card .open {
+      margin-top: 0.3rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ember);
+    }
+    footer {
+      margin-top: clamp(3rem, 8vw, 5rem);
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1rem;
+      justify-content: space-between;
+    }
+    footer .sign { font-family: "Iowan Old Style", Georgia, serif; font-style: italic; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="eyebrow">Generative studies</p>
+    <h1>The Lab</h1>
+    <p class="lede">
+      A small collection of self-contained pieces made in the margins of the day.
+      No frameworks, no build step, no server: one file each, running in your browser.
+    </p>
+
+    <div class="grid">
+      <a class="card" href="./quiet-field/">
+        <span class="no">01</span>
+        <h2>Quiet Field</h2>
+        <p>A Perlin flow-field braiding into silk and coming apart. Move your cursor to stir the wind.</p>
+        <span class="open">Open &rarr;</span>
+      </a>
+    </div>
+
+    <footer>
+      <span>Built with Claude Code.</span>
+      <span class="sign">Made in the margins.</span>
+    </footer>
+  </main>
+</body>
+</html>
